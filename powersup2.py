@@ -8,7 +8,7 @@ from raritan_support2 import hyper_rack_checker, hyper_rack_enumerator, location
     raritan_hyper_rack_pwr_cycle, outlet_comms, raritan_hr_log_in, raritan_log_in
 
 
-#Get Fully Qualified Domain Name from NUC
+#Get Fully Qualified Domain Name
 fqdn = os.environ['MACHINE_HOSTNAME']
 fqdn = fqdn.rsplit('=')[1]
 print(fqdn)

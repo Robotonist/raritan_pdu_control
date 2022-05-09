@@ -74,7 +74,7 @@ elif ((location_derivation(fqdn) == "<LOCATION_CODE>") and (hyper_rack_checker(f
 #    tn.set_debuglevel(5)
     # Find the outlet we want to interact with:
     outlet = outlet_enumerator(fqdn)
-    # Declare the power target for JF Hyper Rack Boards
+    # Declare the power target for <LOCATION_CODE> Hyper Rack Boards
     pwr_target = "cycle"
     # Login to Raritan Unit
     raritan_log_in(tn, HOST, PORT, PASSWORD, USER, PARSER)

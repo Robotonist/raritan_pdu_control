@@ -1,6 +1,28 @@
-Needs a readme (how to install, how to use, what it's for)
+This file is to detail the intallation and uses for the program. 
 
+Use: 
+python3 powersup2.py 
+Run without arguments, place all variables in the .env file. 
 
+Originally designed to be used as part of an automated software and firmware testing suite,
+this program is designed to be installed to a designted testing server and run inside a docker container.
+The script can be run from the command line.
 
+Requirements: 
+The host that will be running the script must have the following: 
+- Docker.io installation 
+- Python3
+- /srv/docker/hostname.env must be populated with a MACHINE_HOSTNAME=hostname
 
-- needs a requirements file
+powersup2.py calls raritan_suport2.py for supporting functions, and the program requires a MACHINE_HOSTNAME populated in a docker .env file. 
+
+The program reads from a docker .env file that we have coded as an example in /srv/docker/hostname.env 
+The contents of hostname.env should detail at least one MACHINE_HOSTNAME on the first line of non-commented code. 
+
+powersup2.py will use the hostname.env file information to select the target, then it will intelligently cycle the specific outlet of the PDU that the test 
+target is attached to. 
+
+This program is designed for use in conjunction with Raritan DominionPX 12-outlet Power Distribution Units. 
+
+Installation: 
+install the program in any directory of your choosing. 
